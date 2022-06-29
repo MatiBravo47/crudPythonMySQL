@@ -43,7 +43,12 @@ def get_producto(id):
     producto=Producto.query.get(id)
     return producto_schema.jsonify(producto)
  
- 
+@app.route('/producto/<id>',methods=['DELETE'])
+def delete_producto(id):
+    producto=Producto.query.get(id)
+    db.session.delete(producto)
+    db.session.commit()
+    return producto_schema.jsonify(producto) 
  
 # programa principal *******************************
 if __name__=='__main__':  
