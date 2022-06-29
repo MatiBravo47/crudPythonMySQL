@@ -49,7 +49,31 @@ def delete_producto(id):
     db.session.delete(producto)
     db.session.commit()
     return producto_schema.jsonify(producto) 
+
+@app.route('/productos', methods=['POST']) # crea ruta o endpoint
+def create_producto():
+    print(request.json)  # request.json contiene el json que envio el cliente
+    nombre=request.json['nombre']
+    precio=request.json['precio']
+    stock=request.json['stock']
+    new_producto=Producto(nombre,precio,stock)
+    db.session.add(new_producto)
+    db.session.commit()
+    return producto_schema.jsonify(new_producto) 
+
+@app.route('/productos/<id>' ,methods=['PUT'])
+def update_producto(id):
+    producto=Producto.query.get(id)
+   
+    nombre=request.json['nombre']
+    precio=request.json['precio']
+    stock=request.json['stock']
  
+    producto.nombre=nombre
+    producto.precio=precio
+    producto.stock=stock
+    db.session.commit()
+    return producto_schema.jsonify(producto)
 # programa principal *******************************
 if __name__=='__main__':  
     app.run(debug=True, port=5000)
