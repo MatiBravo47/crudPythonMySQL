@@ -22,9 +22,9 @@
                     <label for="txtNombre">Piloto:</label>
                     <input type="text" class="form-control" name="txtNombre" id="txtNombre"><br>
                 </div> -->
-                <div>
-                <select class="form-select" aria-label="Default select example" id="txtNombre">
-                    <option selected>Open this select menu</option>
+                <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" name="txtNombre" id="txtNombre"><br>
+                    <option selected>Seleccione piloto</option>
                     <!-- REDBULL -->
                     <option value="Max Verstappen">Max Verstappen</option>
                     <option value="Checo Perez">Checo Perez</option>
@@ -58,11 +58,34 @@
                   </select>
                 </div>
                 <div class="mb-3">
-                    <label for="txtPrecio">Circuito:</label>
-                    <input type="text" class="form-control" name="txtPrecio" id="txtPrecio"> <br>
+                    <!-- <label for="txtPrecio">Circuito:</label>
+                    <input type="text" class="form-control" name="txtPrecio" id="txtPrecio"> <br> -->
+                    <select class="form-select" aria-label="Default select example" name="txtPrecio" id="txtPrecio" ><br>
+                        <option selected>Seleccione Circuito</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Arabia Saudita">Arabia Saudita</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Reino Unido">Reino Unido</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Hungria">Hungria</option>
+                        <option value="Belgica">Belgica</option>
+                        <option value="Holanda">Holanda</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Singapur">Singapur</option>
+                        <option value="Japon">Japon</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Abu Dhabi">Abu Dhabi</option>                        
+                      </select>
                 </div>
                 <div class="mb-3">
-                    <label for="txtStock">Puntos:</label>
+                    <label for="txtStock">Posicion:</label>
                     <input type="number" class="form-control" name="txtStock" id="txtStock"> <br>
                 </div>
                 <button type="button" class="btn btn-success" onclick="modificar()">Guardar </button>
