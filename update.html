@@ -12,28 +12,63 @@
 <body>
     <main style="margin: 1% 20%;">
         <div class="container">
-            <h1>Modificacion Productos</h1>
+            <h1>Modificacion Pilotos</h1>
             <form >
                 <div class="mb-3">
                     <label for="txtId">Id</label>
-                            <input type="text" class="form-control" name="txtId" id="txtId" disabled><br>
+                    <input type="text" class="form-control" name="txtId" id="txtId" disabled><br>
                 </div>
-                <div class="mb-3">
-                    <label for="txtNombre">Nombre:</label>
+                <!-- <div class="mb-3">
+                    <label for="txtNombre">Piloto:</label>
                     <input type="text" class="form-control" name="txtNombre" id="txtNombre"><br>
+                </div> -->
+                <div>
+                <select class="form-select" aria-label="Default select example" id="txtNombre">
+                    <option selected>Open this select menu</option>
+                    <!-- REDBULL -->
+                    <option value="Max Verstappen">Max Verstappen</option>
+                    <option value="Checo Perez">Checo Perez</option>
+                    <!-- FERRARI -->
+                    <option value="Carlos Sainz">Carlos Sainz</option>
+                    <option value="Charles Leclerc">Charles Leclerc</option>
+                    <!-- MERCEDES -->
+                    <option value="Lewis Hamilton">Lewis Hamilton</option>
+                    <option value="George Russell">George Russell</option>
+                    <!-- MCLAREN -->
+                    <option value="Lando Norris">Lando Norris</option>
+                    <option value="Daniel Ricciardo">Daniel Ricciardo</option>
+                    <!-- HAAS -->
+                    <option value="Mick Schumacher">Mick Schumacher</option>
+                    <option value="Kevin Magnussen">Kevin Magnussen</option>
+                    <!-- ALPINE -->
+                    <option value="Fernando Alonso">Fernando Alonso</option>
+                    <option value="Esteban Ocon">Esteban Ocon</option>
+                    <!-- ALPHATAURI -->
+                    <option value="Pierre Gasly">Pierre Gasly</option>
+                    <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+                    <!-- ALFA ROMEO -->
+                    <option value="Valteri Bottas">Valteri Bottas</option>
+                    <option value="Zhou Gaunyu">Zhou Gaunyu</option>
+                    <!-- WILLIAMS -->
+                    <option value="Nicholas Latifi">Nicholas Latifi</option>
+                    <option value="Alexander Albon">Alexander Albon</option>
+                    <!-- ASTON MARTIN -->
+                    <option value="Sebastian Vettel">Sebastian Vettel</option>
+                    <option value="Lance Stroll">Lance Stroll</option>
+                  </select>
                 </div>
                 <div class="mb-3">
-                    <label for="txtPrecio">Precio:</label>
+                    <label for="txtPrecio">Circuito:</label>
                     <input type="text" class="form-control" name="txtPrecio" id="txtPrecio"> <br>
                 </div>
                 <div class="mb-3">
-                    <label for="txtStock">Stock:</label>
+                    <label for="txtStock">Puntos:</label>
                     <input type="number" class="form-control" name="txtStock" id="txtStock"> <br>
                 </div>
-                <button type="button" class="btn btn-success" onclick="modificar()">Grabar </button>
+                <button type="button" class="btn btn-success" onclick="modificar()">Guardar </button>
             </form>
             <br>
-            <a href="index.html" class="btn btn-warning">Home</a>
+            <a href="index.html" class="btn btn-warning">Inicio</a>
         </div>
     </main>
     <script src="./js/update.js"></script>

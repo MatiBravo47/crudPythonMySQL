@@ -1,7 +1,7 @@
 function guardar() {
  
     let n = document.getElementById("txtNombre").value
-    let p = parseFloat(document.getElementById("txtPrecio").value)
+    let p = document.getElementById("txtPrecio").value
     let s = parseInt(document.getElementById("txtStock").value)
  
     let producto = {
