@@ -13,8 +13,8 @@ document.getElementById("txtStock").value = parts[3][1]
 function modificar() {
     let id = document.getElementById("txtId").value
     let n = document.getElementById("txtNombre").value
-    let p = (document.getElementById("txtPrecio").value)
-    let s = parseInt(document.getElementById("txtStock").value)
+    let p = document.getElementById("txtPrecio").value
+    let s = document.getElementById("txtStock").value
     let producto = {
         nombre: n,
         precio: p,

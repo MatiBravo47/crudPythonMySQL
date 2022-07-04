@@ -16,7 +16,7 @@ class Producto(db.Model):   # la clase Producto hereda de db.Model
     id=db.Column(db.Integer, primary_key=True)   #define los campos de la tabla
     nombre=db.Column(db.String(100))
     precio=db.Column(db.String(100))
-    stock=db.Column(db.Integer)
+    stock=db.Column(db.String(100))
     def __init__(self,nombre,precio,stock):   #crea el  constructor de la clase
         self.nombre=nombre   # no hace falta el id porque lo crea sola mysql por ser auto_incremento
         self.precio=precio

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -23,70 +23,75 @@
                     <input type="text" class="form-control" name="txtNombre" id="txtNombre"><br>
                 </div> -->
                 <div class="mb-3">
+                  <!-- <label for="txtPrecio">Circuito:</label>
+                  <input type="text" class="form-control" name="txtPrecio" id="txtPrecio"> <br> -->
+                  <select class="form-select" aria-label="Default select example" name="txtPrecio" id="txtPrecio" ><br>
+                      <option selected>Seleccione Gran Premio</option>
+                      <option value="Bahrain">Bahrain</option>
+                      <option value="Arabia Saudita">Arabia Saudita</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Italia">Italia</option>
+                      <option value="Estados Unidos">Estados Unidos</option>
+                      <option value="Monaco">Monaco</option>
+                      <option value="Azerbaijan">Azerbaijan</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Reino Unido">Reino Unido</option>
+                      <option value="Austria">Austria</option>
+                      <option value="Francia">Francia</option>
+                      <option value="Hungria">Hungria</option>
+                      <option value="Belgica">Belgica</option>
+                      <option value="Holanda">Holanda</option>
+                      <option value="Italia">Italia</option>
+                      <option value="Singapur">Singapur</option>
+                      <option value="Japon">Japon</option>
+                      <option value="Mexico">Mexico</option>
+                      <option value="Brasil">Brasil</option>
+                      <option value="Abu Dhabi">Abu Dhabi</option>                        
+                    </select>
+              </div>
+              <div class="mb-3">
+                <label for="txtNombre">Circuito</label>
+                <input type="text" class="form-control" name="txtNombre" id="txtNombre"> <br>
+            </div>
+                <!-- <div class="mb-3">
                 <select class="form-select" aria-label="Default select example" name="txtNombre" id="txtNombre"><br>
                     <option selected>Seleccione piloto</option>
-                    <!-- REDBULL -->
+                    
                     <option value="Max Verstappen">Max Verstappen</option>
                     <option value="Checo Perez">Checo Perez</option>
-                    <!-- FERRARI -->
+                    
                     <option value="Carlos Sainz">Carlos Sainz</option>
                     <option value="Charles Leclerc">Charles Leclerc</option>
-                    <!-- MERCEDES -->
+                    
                     <option value="Lewis Hamilton">Lewis Hamilton</option>
                     <option value="George Russell">George Russell</option>
-                    <!-- MCLAREN -->
+                    
                     <option value="Lando Norris">Lando Norris</option>
                     <option value="Daniel Ricciardo">Daniel Ricciardo</option>
-                    <!-- HAAS -->
+                    
                     <option value="Mick Schumacher">Mick Schumacher</option>
                     <option value="Kevin Magnussen">Kevin Magnussen</option>
-                    <!-- ALPINE -->
+                    
                     <option value="Fernando Alonso">Fernando Alonso</option>
                     <option value="Esteban Ocon">Esteban Ocon</option>
-                    <!-- ALPHATAURI -->
+                    
                     <option value="Pierre Gasly">Pierre Gasly</option>
                     <option value="Yuki Tsunoda">Yuki Tsunoda</option>
-                    <!-- ALFA ROMEO -->
+                    
                     <option value="Valteri Bottas">Valteri Bottas</option>
                     <option value="Zhou Gaunyu">Zhou Gaunyu</option>
-                    <!-- WILLIAMS -->
+                    
                     <option value="Nicholas Latifi">Nicholas Latifi</option>
                     <option value="Alexander Albon">Alexander Albon</option>
-                    <!-- ASTON MARTIN -->
+                    
                     <option value="Sebastian Vettel">Sebastian Vettel</option>
                     <option value="Lance Stroll">Lance Stroll</option>
                   </select>
-                </div>
+                </div> -->
+                
                 <div class="mb-3">
-                    <!-- <label for="txtPrecio">Circuito:</label>
-                    <input type="text" class="form-control" name="txtPrecio" id="txtPrecio"> <br> -->
-                    <select class="form-select" aria-label="Default select example" name="txtPrecio" id="txtPrecio" ><br>
-                        <option selected>Seleccione Circuito</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Arabia Saudita">Arabia Saudita</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Italia">Italia</option>
-                        <option value="Estados Unidos">Estados Unidos</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Azerbaijan">Azerbaijan</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Reino Unido">Reino Unido</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Francia">Francia</option>
-                        <option value="Hungria">Hungria</option>
-                        <option value="Belgica">Belgica</option>
-                        <option value="Holanda">Holanda</option>
-                        <option value="Italia">Italia</option>
-                        <option value="Singapur">Singapur</option>
-                        <option value="Japon">Japon</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Abu Dhabi">Abu Dhabi</option>                        
-                      </select>
-                </div>
-                <div class="mb-3">
-                    <label for="txtStock">Posicion:</label>
-                    <input type="number" class="form-control" name="txtStock" id="txtStock"> <br>
+                    <label for="txtStock">Fecha:</label>
+                    <input type="text" class="form-control" name="txtStock" id="txtStock"> <br>
                 </div>
                 <button type="button" class="btn btn-success" onclick="modificar()">Guardar </button>
             </form>
