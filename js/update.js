@@ -9,16 +9,19 @@ document.getElementById("txtId").value = parts[0][1];
 document.getElementById("txtGP").value = parts[1][1];
 document.getElementById("txtCircuito").value = parts[2][1];
 document.getElementById("txtFecha").value = parts[3][1];
+document.getElementById("txtFoto").value = parts [4][1];
 
 function modificar() {
   let id = document.getElementById("txtId").value;
   let n = document.getElementById("txtGP").value;
   let p = document.getElementById("txtCircuito").value;
   let s = document.getElementById("txtFecha").value;
+  let f = document.getElementById("txtFoto").value;
   let producto = {
     GP: n,
     circuito: p,
     fecha: s,
+    foto: f,
   };
   let url = "http://localhost:5000/productos/" + id;
   var options = {

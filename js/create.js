@@ -2,11 +2,13 @@ function guardar() {
   let n = document.getElementById("txtGP").value;
   let p = document.getElementById("txtCircuito").value;
   let s = document.getElementById("txtFecha").value;
+  let o = document.getElementById("txtFoto").value;
 
   let producto = {
     GP: n,
     circuito: p,
     fecha: s,
+    foto: f,
   };
   let url = "http://localhost:5000/productos";
   var options = {
