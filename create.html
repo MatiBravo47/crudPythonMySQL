@@ -56,6 +56,7 @@
               <option value="Brasil">Brasil</option>
               <option value="Abu Dhabi">Abu Dhabi</option>
             </select>
+            <br/>
           </div>
           <!-- Escribir circuito -->
           <div class="mb-3">
@@ -72,12 +73,23 @@
           <div class="mb-3">
             <label for="txtFecha">Fecha</label>
             <input
-              type="text"
+              type="date"
               class="form-control"
               name="txtFecha"
               id="txtFecha"
             />
             <br/>
+          </div>
+          <!-- Escribir url foto -->
+          <div class="mb-3">
+            <label for="txtFoto">Foto</label>
+            <input
+              type="text"
+              class="form-control"
+              name="txtFoto"
+              id="txtFoto"
+            />
+            <br />
           </div>
           <!-- Boton guardar  -->
           <button type="button" class="btn btn-success" onclick="guardar()">

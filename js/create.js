@@ -2,7 +2,7 @@ function guardar() {
   let n = document.getElementById("txtGP").value;
   let p = document.getElementById("txtCircuito").value;
   let s = document.getElementById("txtFecha").value;
-  let o = document.getElementById("txtFoto").value;
+  let f = document.getElementById("txtFoto").value;
 
   let producto = {
     GP: n,
