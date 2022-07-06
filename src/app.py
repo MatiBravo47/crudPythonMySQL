@@ -25,12 +25,14 @@ class Producto(db.Model):   # la clase Producto hereda de db.Model
     circuito = db.Column(db.String(100))
     fecha = db.Column(db.String(100))
     foto = db.Column(db.String(100))
+    ronda = db.Column(db.Integer)
 
-    def __init__(self, GP, circuito, fecha, foto):  # crea el  constructor de la clase
+    def __init__(self, GP, circuito, fecha, foto, ronda):  # crea el  constructor de la clase
         self.GP = GP   # no hace falta el id porque lo crea sola mysql por ser auto_incremento
         self.circuito = circuito
         self.fecha = fecha
         self.foto = foto 
+        self.ronda = ronda 
 
 
 db.create_all()  # crea todas las tablas
@@ -39,7 +41,7 @@ db.create_all()  # crea todas las tablas
 
 class ProductoSchema(ma.Schema):
     class Meta:
-        fields = ('id', 'GP', 'circuito', 'fecha', 'foto')
+        fields = ('id', 'GP', 'circuito', 'fecha', 'foto', 'ronda')
 
 
 producto_schema = ProductoSchema()            # para crear un producto
@@ -75,7 +77,8 @@ def create_producto():
     circuito = request.json['circuito']
     fecha = request.json['fecha']
     foto = request.json['foto']
-    new_producto = Producto(GP, circuito, fecha, foto)
+    ronda = request.json['ronda']
+    new_producto = Producto(GP, circuito, fecha, foto, ronda)
     db.session.add(new_producto)
     db.session.commit()
     return producto_schema.jsonify(new_producto)
@@ -89,11 +92,13 @@ def update_producto(id):
     circuito = request.json['circuito']
     fecha = request.json['fecha']
     foto = request.json['foto']
+    ronda = request.json['ronda']
 
     producto.GP = GP
     producto.circuito = circuito
     producto.fecha = fecha
     producto.foto = foto
+    producto.ronda = ronda 
     db.session.commit()
     return producto_schema.jsonify(producto)
 

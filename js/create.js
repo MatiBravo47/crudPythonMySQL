@@ -1,14 +1,16 @@
 function guardar() {
-  let n = document.getElementById("txtGP").value;
-  let p = document.getElementById("txtCircuito").value;
-  let s = document.getElementById("txtFecha").value;
-  let f = document.getElementById("txtFoto").value;
+  let g = document.getElementById("txtGP").value;
+  let c = document.getElementById("txtCircuito").value;
+  let fe = document.getElementById("txtFecha").value;
+  let fo = document.getElementById("txtFoto").value;
+  let r = parseInt(document.getElementById("txtRonda").value);
 
   let producto = {
-    GP: n,
-    circuito: p,
-    fecha: s,
-    foto: f,
+    GP: g,
+    circuito: c,
+    fecha: fe,
+    foto: fo,
+    ronda: r,
   };
   let url = "http://localhost:5000/productos";
   var options = {
@@ -21,6 +23,7 @@ function guardar() {
     .then(function () {
       console.log("creado");
       alert("Guardado");
+      window.location.href = "/CRUDPythonMySQL/index.html"
 
       // Handle response we get from the API
     })

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,18 +17,19 @@
 
         </header>
         <!-- <div class="col-md-12 col-sm-12 text-bg-light p-3"> -->
-            <div id="app">
-                <h2>Circuitos</h2>
+            <div class="p-3 mb-2 bg-dark text-white" id="app">
+                <h2>Calendario F1</h2>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                 <section v-for="producto in productos">
-                <div col>
+                <div col >
                     <div class="container">
-                        <div class="card border-dark shadow p-3 mb-5 bg-body rounded" >
+                        <div class="card border-dark shadow bg-body rounded" >
                             <img class="card-img-top" :src="producto.foto" alt="Card image">
                             <div class="card-body text-bg-danger">
                                 <h5 class="card-title">{{producto.GP}}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">{{producto.circuito}}</h6>
-                                <p class="card-text">Fecha:{{producto.fecha}}</p>
+                                <h6 class="card-subtitle mb-2 text-muted">Ronda: {{producto.ronda}}</h6>
+                                <p class="card-text"><strong>{{producto.fecha}}</strong></p>
                             </div>
                         </div>
                     </div>
