@@ -8,7 +8,6 @@ for (let i = 0; i < args.length; ++i) {
 console.log(args);
 document.getElementById("txtId").value = parts[0][1];
 document.getElementById("txtGP").value = parts[1][1];
-
 document.getElementById("txtCircuito").value = parts[2][1];
 document.getElementById("txtFecha").value = parts[3][1];
 document.getElementById("txtFoto").value = parts [4][1];
