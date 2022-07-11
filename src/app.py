@@ -11,7 +11,7 @@ CORS(app)
 
 # configuro la base de datos, con el nombre el usuario y la clave
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Contrasql47!@localhost/flaskmysql'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://lbmaanhbdzspdo:a9c73518a6ecce04736e18b72f1a6f726140e19b837be2f07a567ff69768a3ff@ec2-3-222-74-92.compute-1.amazonaws.com:5432/d21tg4kjntp8tj'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://lbmaanhbdzspdo:a9c73518a6ecce04736e18b72f1a6f726140e19b837be2f07a567ff69768a3ff@ec2-3-222-74-92.compute-1.amazonaws.com:5432/d21tg4kjntp8tj'
 #                                               usuario:clave@localhost/nombreBaseDatos
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
