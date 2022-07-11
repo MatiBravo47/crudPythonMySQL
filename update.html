@@ -20,10 +20,10 @@
     <!-- Vinculo con VUE.JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
-  <body>
+  <body class="bg-dark">
     <main style="margin: 1% 20%">
-      <div class="container">
-        <h1>Modificacion Circuitos</h1>
+      <div class="container bg-dark text-white">
+        <h1 class="text-danger">Modificacion Circuitos</h1>
         <form>
           <div class="mb-3">
             <label for="txtId">Id</label>
@@ -52,7 +52,7 @@
               <br />
               <option selected>Seleccione Gran Premio</option>
               <option value="Bahrain">Bahrain</option>
-              <option value="Espania">Espania</option>
+              <option value="Espania">España</option>
               <option value="Arabia Saudita">Arabia Saudita</option>
               <option value="Australia">Australia</option>
               <option value="Italia">Italia</option>
@@ -107,12 +107,11 @@
             />
             <br />
           </div>
-          <button type="button" class="btn btn-success" onclick="modificar()">
+          <button type="button" class="btn btn-outline-success" onclick="modificar()">
             Guardar
           </button>
+          <a href="index.html" type="button" class="btn btn-outline-primary">Atras</a>
         </form>
-        <br />
-        <a href="index.html" class="btn btn-warning">Inicio</a>
       </div>
     </main>
     <script src="./js/update.js"></script>

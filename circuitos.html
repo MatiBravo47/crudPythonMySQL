@@ -17,20 +17,20 @@
 
         </header>
         <!-- <div class="col-md-12 col-sm-12 text-bg-light p-3"> -->
-            <div class="p-3 mb-2 bg-dark text-white" id="app">
-                <h2>Calendario F1</h2>
-                <a href="index.html" class="btn btn-success">Editar</a>
+            <div class="p-3 mb-2 bg-dark text-white" id="app">               
+                <h1 class="text-danger">CALENDARIO F1</h1>
+                <a href="index.html" type="button" class="btn btn-outline-warning ">Modificar</a>                
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                 <section v-for="producto in productos">
                 <div col >
                     <div class="container">
                         <div class="card border-dark shadow bg-body rounded" >
                             <img class="card-img-top" :src="producto.foto" alt="Card image">
-                            <div class="card-body text-bg-danger">
-                                <h5 class="card-title">{{producto.GP}}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">{{producto.circuito}}</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">Ronda: {{producto.ronda}}</h6>
-                                <p class="card-text"><strong>{{producto.fecha}}</strong></p>
+                            <div class="card-body text-bg-danger text-center">
+                                <h2 class="card-subtitle mb-2 text-muted text-start">Ronda: {{producto.ronda}}</h2>
+                                <h2 class="card-title">{{producto.GP}}</h2>
+                                <h4 class="card-subtitle mb-2 text-muted fst-italic">{{producto.circuito}}</h4>                                
+                                <h3 class="card-text"><strong>{{producto.fecha}}</strong></>
                             </div>
                         </div>
                     </div>

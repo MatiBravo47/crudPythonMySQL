@@ -12,10 +12,10 @@
     <!-- Vinculo con VUE.JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
-<body>
+<body class="bg-dark text-white">
     <main>
-        <div class="container" id="app">
-            <h1>Circuitos</h1>
+        <div class="container p-3 mb-2" id="app">
+            <h1 class="text-danger">Circuitos</h1>
             <section v-if="errored">
              <p>Lo sentimos, no es posible obtener la información en este momento, por favor intente nuevamente mas tarde</p>
             </section>
@@ -28,11 +28,11 @@
                 </div>
                 <!-- cuando terminar de cargar la pagina  -->
                 <div v-else>
-                    <a href="create.html" class="btn btn-success">Nuevo</a>
-                    <a href="circuitos.html" class="btn btn-success">Ir a calendario</a>
+                    <a href="create.html" type="button" class="btn btn-outline-success">Nuevo</a>
+                    <a href="circuitos.html" type="button" class="btn btn-outline-primary">Ir a calendario</a>
                     <br><br>
                     <!-- Tabla de circuitos -->
-                    <table class="table table-striped table-responsive">
+                    <table class="table table-hover table-responsive table-dark">
                         <tr>
                             <th>Id</th>
                             <th>Ronda</th>
@@ -50,8 +50,8 @@
                             <td>{{producto.fecha}}</td>
                             <td>
                                 <!-- columna1='+tabla.columna1'+'&columna2='+tabla.columna2 -->
-                                <a :href="'update.html?id='+producto.id+'&GP='+producto.GP+'&circuito='+producto.circuito+'&fecha='+producto.fecha+'&foto='+producto.foto+'&ronda='+producto.ronda" class="btn btn-primary">Modificar</a>
-                                <button v-on:click="eliminar(producto.id)" class="btn btn-danger">Eliminar</button>
+                                <a :href="'update.html?id='+producto.id+'&GP='+producto.GP+'&circuito='+producto.circuito+'&fecha='+producto.fecha+'&foto='+producto.foto+'&ronda='+producto.ronda" type="button" class="btn btn-outline-warning">Modificar</a>
+                                <button v-on:click="eliminar(producto.id)" type="button" class="btn btn-outline-danger">Eliminar</button>
                             </td>
                         </tr>
                     </table>

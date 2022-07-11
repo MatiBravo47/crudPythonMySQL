@@ -6,9 +6,10 @@ for (let i = 0; i < args.length; ++i) {
   parts[i] = args[i].split("=");
 }
 console.log(args);
+var re= /%20/gi;
 document.getElementById("txtId").value = parts[0][1];
-document.getElementById("txtGP").value = parts[1][1];
-document.getElementById("txtCircuito").value = parts[2][1];
+document.getElementById("txtGP").value = parts[1][1].replace(re,' ');
+document.getElementById("txtCircuito").value = parts[2][1].replace(re,' ');
 document.getElementById("txtFecha").value = parts[3][1];
 document.getElementById("txtFoto").value = parts [4][1];
 document.getElementById("txtRonda").value = parts [5][1];
@@ -16,8 +17,7 @@ document.getElementById("txtRonda").value = parts [5][1];
 function modificar() {
   let id = document.getElementById("txtId").value;
   let g = document.getElementById("txtGP").value;
-  var re= /%20/gi;
-  let c = document.getElementById("txtCircuito").value.replace(re,' ');
+  let c = document.getElementById("txtCircuito").value;
   let fe = document.getElementById("txtFecha").value;
   let fo = document.getElementById("txtFoto").value;
   let r = parseInt(document.getElementById("txtRonda").value);
