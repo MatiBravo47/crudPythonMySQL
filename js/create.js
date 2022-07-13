@@ -12,7 +12,8 @@ function guardar() {
     foto: fo,
     ronda: r,
   };
-  let url = "http://localhost:5000/productos";
+  let url = "https://crudf1.herokuapp.com/productos";
+  //let url = "http://localhost:5000/productos";
   var options = {
     body: JSON.stringify(producto),
     method: "POST",
