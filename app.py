@@ -104,7 +104,9 @@ def update_producto(id):
     db.session.commit()
     return producto_schema.jsonify(producto)
 
-
+@app.route('/',methods=['GET'])
+def index():
+    return "Hola mundo"
 # programa principal *******************************
 if __name__ == '__main__':
     app.run(debug=False)
