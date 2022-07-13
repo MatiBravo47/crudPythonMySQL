@@ -11,7 +11,8 @@ CORS(app)
 
 # configuro la base de datos, con el nombre el usuario y la clave
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Contrasql47!@localhost/flaskmysql'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wjojqkvcowgymg:db127e7b6cd9d59c293c186885298b41d2d6bed1eeabe27b8afbb531fa012cc5@ec2-52-20-166-21.compute-1.amazonaws.com:5432/d92ncp678ifbp1'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql10506231:Xq26N5juLI@sql10.freesqldatabase.com/sql10506231'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://siwifaizywyjnh:b88f27eb6ac5584c651a4cbf407f691d9d814cb2d613fbc8c802baf03b35f386@ec2-52-204-157-26.compute-1.amazonaws.com:5432/d3mo7iqgfhsdte'
 #                                               usuario:clave@localhost/nombreBaseDatos
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -106,4 +107,5 @@ def update_producto(id):
 
 # programa principal *******************************
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=False)
+    #app.run(debug=True, port=5000)
