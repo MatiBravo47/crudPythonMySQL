@@ -24,7 +24,8 @@ function guardar() {
     .then(function () {
       console.log("creado");
       alert("Guardado");
-      window.location.href = "/CRUDPythonMySQL/index.html"
+      // window.location.href = "/CRUDPythonMySQL/index.html"
+      window.location.href = "https://matibravo47.github.io/crudPythonMySQL/index.html"
 
       // Handle response we get from the API
     })
