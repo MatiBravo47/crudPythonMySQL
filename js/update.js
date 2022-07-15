@@ -40,7 +40,8 @@ function modificar() {
     .then(function () {
       console.log("modificado");
       alert("Registro modificado");
-      window.location.href = "/CRUDPythonMySQL/index.html"
+      // window.location.href = "/CRUDPythonMySQL/index.html"
+      window.location.href = "https://matibravo47.github.io/crudPythonMySQL/index.html"
       // Handle response we get from the API
     })
     .catch((err) => {
